@@ -1,7 +1,13 @@
 import { useRef } from 'react';
 import styles from './TypingArea.module.css';
 
-function TypingArea({ paragraph, typedText, onInputChange }) {
+function TypingArea({
+  paragraph,
+  typedText,
+  onInputChange,
+  onInputFocus,
+  isDisabled,
+}) {
   const inputRef = useRef(null);
 
   return (
@@ -9,10 +15,12 @@ function TypingArea({ paragraph, typedText, onInputChange }) {
       <input
         ref={inputRef}
         type="text"
-        placeholder="You will type your text here. Just press on this input field or on the text."
+        placeholder="Start typing here..."
         className={styles.input}
         value={typedText}
         onChange={e => onInputChange(e.target.value)}
+        onFocus={onInputFocus}
+        disabled={isDisabled}
       />
       <p className={styles.paragraph} onClick={() => inputRef.current.focus()}>
         {paragraph.split('').map((char, index) => {
@@ -24,7 +32,7 @@ function TypingArea({ paragraph, typedText, onInputChange }) {
           }
 
           if (index === typedText.length) {
-            className += `${styles.active}`;
+            className += ` ${styles.active}`;
           }
 
           return (

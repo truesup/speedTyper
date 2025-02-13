@@ -1,0 +1,29 @@
+.statsWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+.statItem {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.resetButton {
+  padding: 8px 20px;
+  font-size: 1.1rem;
+  border: none;
+  background-color: #26adb2;
+  color: white;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.resetButton:hover {
+  background-color: rgba(38, 173, 178, 0.8);
+}
+.resetButton:active {
+  scale: 0.97;
+}
