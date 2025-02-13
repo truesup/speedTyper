@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100dvw;
+  height: 100dvh;
+}
+body {
+  font-family: 'Poppins', serif;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #63d1d5;
+  color: black;
+}
+.appWrapper {
+  width: 800px;
+  height: auto;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
