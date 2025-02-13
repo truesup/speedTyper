@@ -7,9 +7,10 @@
 }
 .input {
   font-family: inherit;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   width: 100%;
   padding: 4px;
+  margin-bottom: 12px;
 }
 .paragraph {
   font-size: 1.2rem;
@@ -17,4 +18,15 @@
   text-align: justify;
   letter-spacing: 1px;
   word-break: break-all;
+}
+.correct {
+  color: green;
+}
+.incorrect {
+  color: red;
+
+  border-radius: 2px;
+}
+.active {
+  text-decoration: underline;
 }
